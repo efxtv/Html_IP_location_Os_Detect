@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ip Location Using ipinfo.io</h1>
+<hr/>
+<div id="ip">Check your internet........</div>
+<div id="city">Check your internet........</div>
+<div id="postal">Check your internet........</div>
+<div id="region">Check your internet........</div>
+<div id="country">Check your internet........</div>
+<div id="location">Check your internet........</div>
+<div id="timezone">Check your internet........</div>
+<div id="org">Check your internet........</div>
+	
+
+<hr/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+ $.get('https://ipinfo.io',function(response){
+ 	$("#ip").html('Ip:<b>'+response.ip+'<b>');
+ 	$("#city").html('City:<b>'+response.city+'<b>');
+ 	$("#postal").html('Postal:<b>'+response.postal+'<b>');
+ 	$("#region").html('Region:<b>'+response.region+'<b>');
+ 	$("#country").html('Country:<b>'+response.country+'<b>');
+ 	$("#location").html('Location:<b>'+response.loc+'<b>');
+ 	$("#timezone").html('Timezone:<b>'+response.timezone+'<b>');
+ 	$("#org").html('ISP:<b>'+response.org+'<b>');
+ },'jsonp');
+</script>
+</body>
+</html>
